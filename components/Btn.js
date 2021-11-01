@@ -4,6 +4,8 @@ import { Button } from '@chakra-ui/button';
 
 export default function Btn({
     fw,
+    py,
+    txt,
     gap,
     icon,
     color,
@@ -13,6 +15,7 @@ export default function Btn({
     change,
     iconSvg,
     widthIcon,
+    alignSelf,
     colorHover,
     letterSpacing,
     widthContainerIcon,
@@ -27,6 +30,9 @@ export default function Btn({
     return (
         <Fragment>
             <Button
+                py={py}
+                textTransform={txt}
+                alignSelf={alignSelf}
                 fontWeight={fw}
                 fontSize={fSize}
                 letterSpacing={letterSpacing}
@@ -51,10 +57,10 @@ export default function Btn({
                     color: colorHover,
                     boxShadow: `${change ? `0 0 0 2px ${colorShadow} inset` : `0 0 0 48px ${colorShadow} inset`}`
                 }}
-                _focus={{ 
+                _focus={{
                     color: colorHover,
                     boxShadow: `${change ? `0 0 0 2px ${colorShadow} inset` : `0 0 0 48px ${colorShadow} inset`}`
-                 }}
+                }}
             >
                 {
                     icon && <Flex color="white" justifyContent="center" w={widthContainerIcon} h="full" bgColor={colorShadow} >

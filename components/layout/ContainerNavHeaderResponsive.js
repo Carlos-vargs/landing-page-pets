@@ -8,7 +8,6 @@ function ContainerNavHeaderResponsive({ data }) {
             w="40px" h="40px"
             display={['flex', 'flex', 'flex', 'none', 'none']}
             alignItems="center"
-            mr="16px"
             alignSelf="center"
             _hover={{
                 color: '#ED6436',

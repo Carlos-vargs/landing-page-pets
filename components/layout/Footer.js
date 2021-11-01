@@ -9,6 +9,7 @@ import Twitter from '@components/social_networks/Twitter';
 import ContainerSocialNetworks from '@components/social_networks/ContainerSocialNetworks';
 import { Input } from '@chakra-ui/input';
 import Btn from '@components/Btn';
+import { nanoid } from 'nanoid';
 
 
 function Footer() {
@@ -16,30 +17,30 @@ function Footer() {
     const info = {
         about: [
             {
-                id: "FV03eweu_G",
+                id: nanoid(),
                 title: "Salt Lake City, Utah(UT)",
             },
             {
-                id: "KdZ8ObRRN2",
+                id: nanoid(),
                 title: "+1 435 237-2950",
             },
             {
-                id: "gxR0xG_Gr5",
+                id: nanoid(),
                 title: "Mon - Sun: 8AM - 8PM"
             },
 
         ],
         quickLinks: [
             {
-                id: "9G5DTMoDojy-2",
+                id: nanoid(),
                 title: "Dog Boarding Services",
             },
             {
-                id: "b-v4IPi8832E7",
+                id: nanoid(),
                 title: "Cat Boarding Services",
             },
             {
-                id: "_863rbrHL1cYp",
+                id: nanoid(),
                 title: "Spa and Grooming Services",
             },
         ]
@@ -47,25 +48,25 @@ function Footer() {
 
     const socialNetworks = [
         {
-            id: "004a2301-92c5-489b-9c77-301f72b77968",
+            id: nanoid(),
             socialNetwork: 'Facebook',
             iconSvg: <Facebook />,
             pl: '6px'
         },
         {
-            id: "dd08d91d-8488-4071-b274-b7c07f6c8895",
+            id: nanoid(),
             socialNetwork: 'Instagram',
             iconSvg: <Instagram />,
             url: 'https://www.instagram.com/nc_cvargas',
         },
         {
-            id: "8a0dc83b-4eca-41a3-9b40-b006323829d9",
+            id: nanoid(),
             socialNetwork: 'Github',
             iconSvg: <Github />,
             url: 'https://github.com/Carlos-vargs',
         },
         {
-            id: "5513d04d-7e31-4470-8e03-31f18cd7339e",
+            id: nanoid(),
             socialNetwork: 'Twitter',
             iconSvg: <Twitter />,
             url: 'https://twitter.com/nc_cvargas',
@@ -76,11 +77,13 @@ function Footer() {
 
     return (
         <Flex
-            px={['28px', '28px', '28px', '78px', '78px']}
+            bgColor="transparent"
+            mt="40px"
+            px={['0px', '0px', '0px', '78px', '78px']}
             direction={['column', 'column', 'column', 'row', 'row']}
             flexWrap="wrap"
             gridGap={['20px', '20px', '20px', '100px', '100px']}
-            justifyContent="space-between"
+            justifyContent={['center', 'center', 'center', 'center', 'space-between']}
             alignItems={['center', 'center', 'center', 'flex-start', 'flex-start',]}
             textAlign={['center', 'center', 'center', 'left', 'left']}
             paddingBlockEnd="26px"
@@ -101,7 +104,7 @@ function Footer() {
                     info.quickLinks.map(e => <Box key={e.id} >{e.title}</Box>)
                 }
             </Stack>
-            <Stack>
+            <Stack >
                 <Heading as="h3" color="#ed6436" fontSize="23px" >Newsletter</Heading>
                 <Input
                     placeholder="Your email"
@@ -118,10 +121,11 @@ function Footer() {
                     title={'SUBSCRIBE'}
                     borderTopEndRadius={'none'}
                     change={true}
-                    colorHover={'black'}
+                    colorHover={'#ed6436'}
                     color={'white'}
                     width={'full'}
                     gap={'12px'}
+                    fw={'700'}
                 />
 
             </Stack>

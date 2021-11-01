@@ -1,0 +1,20 @@
+@keyframes move {
+	20% {
+		transform: translate(10px, -12px);
+	}
+
+	40% {
+		transform: translate(10px, 12px);
+	}
+
+	60% {
+		transform: translate(10px, 14px);
+	}
+}
+
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}

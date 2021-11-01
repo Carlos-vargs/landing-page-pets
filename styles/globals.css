@@ -16,6 +16,10 @@ a {
   box-sizing: border-box;
 }
 
-.scroll-mt{
-  scroll-margin-top: 80px;
+.scroll-mt {
+  scroll-margin-block-start: 80px;
+}
+
+.scroll-mt-11 {
+  scroll-margin-block-start: 130px;
 }

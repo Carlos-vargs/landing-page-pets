@@ -6,11 +6,11 @@
         "strictFunctionTypes": true,
         "baseUrl": ".",
         "paths": {
-            "@components/*": [
-                "components/*"
-            ],
             "@icons/*": [
                 "components/icons/*"
+            ],
+            "@components/*": [
+                "components/*"
             ],
         }
     },
