@@ -2,6 +2,7 @@ import React from 'react';
 import { Flex } from '@chakra-ui/layout';
 import CloudLeftImage1 from '@components/clouds/CloudLeftImage1';
 import ReviewContainer from './ReviewContainer';
+import lexi from '../../../resources/images/lexi-dog.jpg';
 
 function Section5() {
     return (
@@ -20,7 +21,12 @@ function Section5() {
                 position="relative"
             >
                 <CloudLeftImage1
-                    fill="#8AC36D"
+                    url={lexi.src}
+                    x={'-280'}
+                    y={'-240'}
+                    sizeW={'140%'}
+                    sizeH={'180%'}
+                    id={'lexi-dog-s5lst'}
                 />
             </Flex>
             <ReviewContainer />

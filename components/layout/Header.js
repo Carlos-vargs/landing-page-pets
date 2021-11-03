@@ -47,12 +47,12 @@ function Header() {
 			justifyContent='space-between'
 			position="fixed"
 			bgColor="white"
-			zIndex="9999"
+			zIndex="24"
 		>
 			<Center>
 				<Image width="full" h="44px" src={logo.src} alt={'logo'} />
 			</Center>
-			<ContainerNavHeaderResponsive data={nav} />
+			<ContainerNavHeaderResponsive data={nav} phoneNumber={phoneNumber} />
 			<ContainerNavHeader data={nav} phoneNumber={phoneNumber} />
 		</Flex >
 	);

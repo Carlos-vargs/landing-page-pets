@@ -8,11 +8,12 @@ import CatIcon from '@icons/CatIcon';
 import SpaIcon from '@icons/SpaIcon';
 import DogIcon from '@icons/DogIcon';
 import { nanoid } from 'nanoid';
+import image from '../../../resources/images/husky-play.jpg'
 
 function Section1() {
 
-	let timer = 2
-	let timer1 = 4
+	let timer = 0
+	let timer1 = 0
 	let timer2 = 0
 
 
@@ -25,7 +26,7 @@ of human interaction, time outside.`,
 			icon: <CatIcon />,
 			op: 0,
 			time: timer,
-			animationName: 'change',
+			animationName: 'slider',
 
 		},
 		{
@@ -36,7 +37,7 @@ as well as medicated shampoo.`,
 			icon: <SpaIcon />,
 			op: 0,
 			time: timer1,
-			animationName: 'move2',
+			animationName: 'slider',
 
 		},
 		{
@@ -47,7 +48,7 @@ Luxury dog kennels, exercise.`,
 			icon: <DogIcon />,
 			op: 1,
 			time: timer1,
-			animationName: 'change',
+			animationName: 'slider',
 		},
 	]
 
@@ -130,7 +131,7 @@ Luxury dog kennels, exercise.`,
 			<Box w={['100%', '100%', '100%', '160%', '160%']} maxW="1000px" >
 				<CloudRightImage2
 					id={'wolfImg'}
-					url={'https://images.unsplash.com/photo-1541876176131-3f5e84a7331a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80'}
+					url={image.src}
 					x={'-380'}
 					y={'-200'}
 					sizeW={'180%'}

@@ -8,6 +8,7 @@ import AlarmClockIcon from '@icons/AlarmClockIcon';
 import BallIcon from '@icons/BallIcon';
 import { nanoid } from 'nanoid';
 import Card from './Card';
+import bgImg from '../../../resources/images/checkInTime-bgImage.png';
 
 function Section7() {
 
@@ -30,7 +31,6 @@ bring something that smells like home.`
 
     return (
         <Flex
-            id="home"
             w="full"
             className="scroll-mt"
             justifyContent={['center', 'center', 'center', 'space-between', 'space-between',]}
@@ -101,15 +101,21 @@ bring something that smells like home.`
                 </Flex>
             </Box>
 
-            <Box w={['100%', '100%', '100%', '160%', '160%']} maxW="1000px" >
+            <Box w={['100%', '100%', '100%', '160%', '160%']} maxW="1000px" position="relative" >
                 <CloudRightImage2
-                    id={'wolfImg'}
-                    url={'https://images.unsplash.com/photo-1541876176131-3f5e84a7331a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80'}
-                    x={'-380'}
-                    y={'-200'}
-                    sizeW={'180%'}
-                    sizeH={'180%'}
+                    fill={'#DF7D8C'}
                 />
+
+                <Box position="absolute" zIndex="2" w="full" h="full" top="0" >
+                    <CloudRightImage2
+                        id={'eed-fere-se32-fer'}
+                        url={bgImg.src}
+                        x={'20'}
+                        y={'0'}
+                        sizeW={'120%'}
+                        sizeH={'120%'}
+                    />
+                </Box>
             </Box>
 
         </Flex>

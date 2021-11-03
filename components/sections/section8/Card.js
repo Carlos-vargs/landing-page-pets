@@ -1,15 +1,18 @@
+import React, { useState } from 'react';
 import { Box, Flex, Heading, Text } from '@chakra-ui/layout';
 import { Select } from '@chakra-ui/select';
 import { Slider, SliderFilledTrack, SliderThumb, SliderTrack } from '@chakra-ui/slider';
-import React from 'react';
 
 function Card() {
+
+    const [days, setDays] = useState(1)
+
     return (
-        <Flex borderRadius="50px" w="full" bgColor="#F2F2F4" direction="column" px="58px" py="66px" >
+        <Flex borderRadius="50px" w="full" bgColor="#F2F2F4" direction="column" px={['58px', '58px', '58px', '58px', '58px']} py="66px" >
             <Text textTransform="uppercase" color="#ED6436" fontWeight="700">
                 planning a vacation?
             </Text>
-            <Heading fontWeight="700" fontSize="40px" my="30px" whiteSpace="pre-wrap" >
+            <Heading fontWeight="700" fontSize={['28px', '28px', '34', '40px', '40px']} my="30px" whiteSpace="pre-wrap" >
                 Get a quote for
                 pet boarding
             </Heading>
@@ -44,16 +47,22 @@ function Card() {
                 </Box>
             </Flex>
             <Text as="span" textTransform="uppercase" my="16px" fontSize="14px" >number of days</Text>
-            <Slider max={10} aria-label="slider-ex-4" defaultValue={1} onChange={(e) => console.log(e)} >
+            <Slider id="counterDays" max={10} aria-label="slider-ex-4" defaultValue={1} onChange={(e) => setDays(e)} >
                 <SliderTrack bg="#ED6436" h="10px" borderRadius="10px">
                     <SliderFilledTrack bg="#ED6436" />
                 </SliderTrack>
                 <SliderThumb boxSize={9} color="white" bgColor="#82C55B" >
-                    1
+                    {days}
                 </SliderThumb>
             </Slider>
             <Text as="span" mt="30px" fontWeight="700" textTransform="uppercase" color="#ED6436" >total</Text>
-            <Heading mt="10px"  fontWeight="700" fontSize="48px">$ 100.00</Heading>
+            <Heading mt="10px" fontWeight="700" fontSize={['34px', '34px', '48px', '48px', '48px']} >
+                $ {
+                    days * 100 === 1000
+                        ? '1,000'
+                        : days * 100
+                }.00
+            </Heading>
         </Flex >
     );
 }

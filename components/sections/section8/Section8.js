@@ -7,19 +7,18 @@ function Section8() {
     return (
         <Flex
             w="full"
-            id="about"
             className="scroll-mt"
-            flexDirection={['column', 'column', 'column', 'row', 'row']}
+            flexDirection={['column-reverse', 'column-reverse', 'column-reverse', 'row', 'row']}
             mt={['40px', '40px', '40px', '78px', '78px']}
-            pr={['40px', '40px', '40px', '78px', '78px']}
+            pr={['0px', '0px', '0px', '78px', '78px']}
+            alignItems="center"
             gridGap="24px"
             mb="100px"
         >
             <ContainerImage />
-            
             <Card />
         </Flex>
     );
 }
 
-export default Section8; 
+export default Section8;

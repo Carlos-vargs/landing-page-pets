@@ -15,7 +15,7 @@ function CardOffer({ data }) {
             borderRadius="30px"
             zIndex="2"
             w="full"
-            minW="340px"
+            minW={['296px', '340px', '340px', '340px', '340px']}
             alignItems={['center', 'center', 'center', 'flex-start', 'flex-start']}
             textAlign={['center', 'center', 'center', 'left', 'left']}
         >

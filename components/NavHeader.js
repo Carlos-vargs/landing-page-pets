@@ -2,14 +2,22 @@ import { Link } from '@chakra-ui/layout';
 import React from 'react';
 
 
-function NavHeader({ data }) {
+function NavHeader({ data, h, onClick, color }) {
+
+    let colorDefault = "#ed6436"
+    let heightDefault = "full"
+
+    if (color) colorDefault = color
+    if (h) heightDefault = h
+
     return (
         <Link
+            onClick={onClick}
             href={data.url}
             display="flex"
             position="relative"
             alignItems="center"
-            h="full"
+            h={heightDefault}
             alignSelf="center"
             textTransform="capitalize"
             fontWeight="700"
@@ -17,7 +25,7 @@ function NavHeader({ data }) {
                 content: '""',
                 position: "absolute",
                 top: "100%",
-                backgroundColor: "#ed6436",
+                backgroundColor: colorDefault,
                 width: "100%",
                 height: "2px",
                 transform: "scaleX(0)",
@@ -27,14 +35,14 @@ function NavHeader({ data }) {
                 _before: {
                     transform: "scaleX(1)"
                 },
-                color: "#ed6436",
+                color: colorDefault,
                 textDecoration: "none",
             }}
             _focus={{
                 _before: {
                     transform: "scaleX(1)"
                 },
-                color: "#ed6436",
+                color: colorDefault,
                 textDecoration: "none",
                 boxShadow: "none"
 

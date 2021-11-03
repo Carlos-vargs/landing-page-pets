@@ -9,7 +9,7 @@ function Services({ data }) {
             position="absolute"
             userSelect="none"
             cursor="pointer"
-            transition="opacity 500ms ease 0s"
+            // transition="opacity 500ms ease 0s"
             animation={`${data.time}s ${data.animationName} infinite`}
             direction={['column', 'column', 'column', 'row', 'row']}
         >
