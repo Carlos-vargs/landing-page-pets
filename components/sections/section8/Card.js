@@ -8,7 +8,7 @@ function Card() {
     const [days, setDays] = useState(1)
 
     return (
-        <Flex borderRadius="50px" w="full" bgColor="#F2F2F4" direction="column" px={['58px', '58px', '58px', '58px', '58px']} py="66px" >
+        <Flex borderRadius="50px" w="full" maxW="590px" bgColor="#F2F2F4" direction="column" px={['58px', '58px', '58px', '58px', '58px']} py="66px" >
             <Text textTransform="uppercase" color="#ED6436" fontWeight="700">
                 planning a vacation?
             </Text>
