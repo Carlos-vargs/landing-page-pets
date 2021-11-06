@@ -11,28 +11,33 @@ function Header() {
 	const nav = [
 		{
 			id: nanoid(),
-			url: '#home',
+			url: '/#home',
 			title: 'home',
 		},
 		{
 			id: nanoid(),
-			url: '#about',
+			url: '/#about',
 			title: 'about',
 		},
 		{
 			id: nanoid(),
-			url: '#services',
+			url: '/#services',
 			title: 'services',
 		},
 		{
 			id: nanoid(),
-			url: '#reviews',
+			url: '/#reviews',
 			title: 'reviews',
 		},
 		{
 			id: nanoid(),
-			url: '#pricing',
+			url: '/#pricing',
 			title: 'pricing',
+		},
+		{
+			id: nanoid(),
+			url: '/shop',
+			title: 'shop',
 		},
 	]
 

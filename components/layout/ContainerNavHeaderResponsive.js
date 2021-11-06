@@ -88,6 +88,7 @@ function ContainerNavHeaderResponsive({ data }) {
                 isOpen && <Stack
                     className="animate__animated animate__fadeInRightBig"
                     position="absolute"
+                    overflow="auto"
                     h="100vh"
                     zIndex="44"
                     left={`${sizeRight}px`}
@@ -98,8 +99,9 @@ function ContainerNavHeaderResponsive({ data }) {
                     color="white"
                     justifyContent="flex-start"
                     alignItems="center"
-                    pt="24%"
-
+                    pt={['24%', '6%', '6%', '24%', '24%']}
+                    pb={['24%', '6%', '6%', '24%', '24%']}
+                    
                 >
                     <Box position="absolute" w="38px" h="38px" right="39px" top="35px" onClick={handleClick} title="Close">
                         <XIcon />

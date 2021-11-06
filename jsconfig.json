@@ -12,6 +12,9 @@
             "@components/*": [
                 "components/*"
             ],
+            "@database": [
+                "database/db"
+            ],
         }
     },
     "exclude": [

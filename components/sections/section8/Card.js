@@ -6,9 +6,10 @@ import { Slider, SliderFilledTrack, SliderThumb, SliderTrack } from '@chakra-ui/
 function Card() {
 
     const [days, setDays] = useState(1)
+    let count = days * 100
 
     return (
-        <Flex borderRadius={['0px','0px','50px','50px','50px']} w="full"
+        <Flex borderRadius={['0px', '40px', '50px', '50px', '50px']} w="full"
             maxW="590px"
             bgColor="#F2F2F4"
             direction="column"
@@ -64,9 +65,9 @@ function Card() {
             <Text as="span" mt="30px" fontWeight="700" textTransform="uppercase" color="#ED6436" >total</Text>
             <Heading mt="10px" fontWeight="700" fontSize={['34px', '34px', '48px', '48px', '48px']} >
                 $ {
-                    days * 100 === 1000
+                    count === 1000
                         ? '1,000'
-                        : days * 100
+                        : count
                 }.00
             </Heading>
         </Flex >
