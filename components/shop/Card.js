@@ -24,6 +24,7 @@ function Card({ data }) {
             position="relative"
             cursor="pointer"
             _hover={{ boxShadow: "lg" }}
+            textAlign="center"
         >
             <Image src={data.image} w="full" h="270px" />
             <Flex direction="column" alignItems="center" >

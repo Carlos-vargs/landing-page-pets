@@ -3,6 +3,7 @@ import { Flex } from '@chakra-ui/layout';
 import { Button } from '@chakra-ui/button';
 
 export default function Btn({
+    p,
     fw,
     py,
     txt,
@@ -12,6 +13,7 @@ export default function Btn({
     title,
     width,
     fSize,
+    height,
     change,
     iconSvg,
     widthIcon,
@@ -30,6 +32,7 @@ export default function Btn({
     return (
         <Fragment>
             <Button
+                p={p}
                 py={py}
                 textTransform={txt}
                 alignSelf={alignSelf}
@@ -50,6 +53,7 @@ export default function Btn({
                 zIndex="1"
                 px="0px"
                 w={width}
+                h={height}
                 transition="all .3s ease-out"
                 overflow="hidden"
                 boxShadow={change ? `0 0 0 48px ${colorShadow} inset` : `0 0 0 2px ${colorShadow} inset`}
