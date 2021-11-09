@@ -6,6 +6,8 @@ import Card from '@components/shop/Card';
 import ShoppingCarIcon from '@icons/ShoppingCarIcon';
 import { nanoid } from 'nanoid';
 import Btn from '@components/Btn'
+import ShoppingCart from '@components/shop/ShoppingCart';
+
 
 export default function shop() {
 
@@ -17,7 +19,10 @@ export default function shop() {
         petFood: [],
         categories: [],
         sortingData: "",
-    });
+        productsInTheCart: [],
+    })
+
+    const [isOpen, setOpen] = useState(false)
 
     useEffect(() => {
         fetchPetFood()
@@ -49,6 +54,14 @@ export default function shop() {
         setData({ ...data, sortingData: e.target.value })
     }
 
+    function handleClick() {
+        if (isOpen) {
+            setOpen(false)
+        } else {
+            setOpen(true)
+        }
+    }
+
     if (data.loading) {
         return (
             <Flex py="200px" w="full" justifyContent="center" alignItems="center">
@@ -61,11 +74,9 @@ export default function shop() {
                 />
             </Flex>
         )
-    }
+    };
 
-
-
-    const dataFilter = data.petFood.filter(e => data.sortingData !== "" ? e.categorie === data.sortingData : e)
+    const filteredData = data.petFood.filter(e => data.sortingData !== "" ? e.categorie === data.sortingData : e);
 
     return (
         <Flex
@@ -100,7 +111,7 @@ export default function shop() {
                         }
                     </Select>
                 </Box>
-                <Flex justifyContent="center" alignItems="center" position="relative" >
+                <Flex justifyContent="center" alignItems="center" position="relative" onClick={handleClick} >
                     <Btn
                         p={'12px'}
                         title={<ShoppingCarIcon />}
@@ -110,18 +121,23 @@ export default function shop() {
                         width={'46px'}
                         height={'46px'}
                     />
-                    {/* <Flex position="absolute"
-                        top="-6px" right="-29px"
-                        bgColor="#ed6436"
-                        borderRadius="full"
-                        h="30px" w="30px"
-                        color="white"
-                        justifyContent="center"
-                        alignItems="center"
-                    >
-                        10
-                    </Flex> */}
+                    {
+                        data.productsInTheCart.length !== 0
+                            ? <Flex position="absolute"
+                                top="-6px" right="-29px"
+                                bgColor="#ed6436"
+                                borderRadius="full"
+                                h="30px" w="30px"
+                                color="white"
+                                justifyContent="center"
+                                alignItems="center"
+                            >
+                                {data.productsInTheCart.length}
+                            </Flex>
+                            : ""
+                    }
                 </Flex>
+                <ShoppingCart isOpen={isOpen} setData={setData} oldStateData={data}  data={data.productsInTheCart} handleClick={handleClick} />
             </Flex>
             <Flex
                 gridGap="36px"
@@ -130,7 +146,7 @@ export default function shop() {
                 justifyContent="center"
             >
                 {
-                    dataFilter.map(e => <Card key={e.id} data={e} />)
+                    filteredData.map(e => <Card setData={setData} oldStateData={data} key={e.id} data={e} />)
                 }
             </Flex>
         </Flex>

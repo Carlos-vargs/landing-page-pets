@@ -5,9 +5,22 @@ import React from 'react';
 import Onsale from './OnSale';
 import Rate from './Rate';
 
-function Card({ data }) {
+function Card({ data, setData, oldStateData }) {
 
     const colorBase = "#ed6436"
+
+    function handleClick() {
+
+        let count = 1
+
+        oldStateData.productsInTheCart.forEach(e => {
+            if (e.product.id === data.id) {
+                count++
+            }
+        });
+
+        setData({ ...oldStateData, productsInTheCart: [...oldStateData.productsInTheCart, { product: data, count: count }] })
+    }
 
     return (
         <Flex
@@ -41,20 +54,22 @@ function Card({ data }) {
                             : <Text>${data.price}</Text>
                     }
                 </Stack>
-                <Btn
-                    fSize={'14px'}
-                    title={'ADD TO CART'}
-                    borderTopStartRadius={'none'}
-                    change={true}
-                    colorHover={'#ed6436'}
-                    color={'white'}
-                    width={'140px'}
-                    gap={'12px'}
-                    fw={'700'}
-                />
+                <Box onClick={handleClick}>
+                    <Btn
+                        fSize={'14px'}
+                        title={'ADD TO CART'}
+                        borderTopStartRadius={'none'}
+                        change={true}
+                        colorHover={'#ed6436'}
+                        color={'white'}
+                        width={'140px'}
+                        gap={'12px'}
+                        fw={'700'}
+                    />
+                </Box>
                 {
                     data.offer.available
-                        ? <Onsale />
+                        ? <Onsale width={'60px'} height={'60px'} top={'16px'} right={'10px'} />
                         : ''
                 }
             </Flex>

@@ -1,8 +1,6 @@
-import { nanoid } from "nanoid"
-
 const data = [
     {
-        id: nanoid(),
+        id: 'biEUg0_mCA',
         name: "air dried beef",
         rate: 5,
         price: "30.00",
@@ -14,7 +12,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'LZIcamdHed',
         name: "air dried lamb",
         rate: 3,
         price: "34.00",
@@ -26,7 +24,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'xUf1h2hB1k',
         name: "air dried salmon",
         rate: 5,
         price: "9.99",
@@ -38,7 +36,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'fkHAu7r9Vg',
         name: "beef dog rewards",
         rate: 4,
         price: "20.00",
@@ -50,7 +48,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'EnH46iXwNQ',
         name: "dry beef food",
         rate: 5,
         price: "16.00",
@@ -62,7 +60,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'bkw0LqZI-c',
         name: "dry chicken food",
         rate: 5,
         price: "30.00",
@@ -74,7 +72,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'svmJ-PZdrG',
         name: "dry lamb food",
         rate: 5,
         price: "34.00",
@@ -86,7 +84,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: '3KohRTq-lV',
         name: "dry salmon food",
         rate: 5,
         price: "20.00",
@@ -98,7 +96,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'n5BnmMBDRA',
         name: "fish dog rewards",
         rate: 3,
         price: "12.00",
@@ -110,7 +108,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'bB2FZo2ycO',
         name: "free range chicken",
         rate: 4,
         price: "16.00",
@@ -122,7 +120,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'XuTUsvnfWG',
         name: "lamb dog rewards",
         rate: 5,
         price: "36.00",
@@ -134,7 +132,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'retYS6rasF',
         name: "rewards beef food",
         rate: 5,
         price: "20.00",
@@ -146,7 +144,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'kRS_SHIp59',
         name: "salmon full meal",
         rate: 3,
         price: "20.00",
@@ -158,7 +156,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'ph47D4nf9h',
         name: "tuna full meal",
         rate: 5,
         price: "19.00",
@@ -170,7 +168,7 @@ const data = [
         }
     },
     {
-        id: nanoid(),
+        id: 'RuZeDwkBzm',
         name: "venison dog rewards",
         rate: 4,
         price: "20.00",
