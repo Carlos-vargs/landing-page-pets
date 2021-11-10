@@ -13,7 +13,14 @@ function ShoppingCart({ isOpen, handleClick, data, setData, oldStateData }) {
 
     const filteredItems = data.sort((a, b) => a.id === b.id ? b.count - a.count : a - b).filter(o => hash[o.product.id] ? false : hash[o.product.id] = true)
 
-    filteredItems.forEach(e => prices.push(e.count * e.product.price))
+    filteredItems.forEach(e => {
+
+        let counter = e.count
+        let price = e.product.offer.available ? e.product.offer.price : e.product.price
+
+        prices.push(counter * price)
+    }
+    )
 
     const subtotal = prices.reduce((acc, e) => acc + e, 0).toFixed(2)
 
